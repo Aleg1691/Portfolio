@@ -34,5 +34,6 @@
     "PRIVACY_POLICY_TEXT_PART1": "I've read the",
     "PRIVACY_POLICY_LINK_TEXT": "privacy policy",
     "PRIVACY_POLICY_TEXT_PART2": "and agree to the processing of my data as outlined.",
-    "SEND_MESSAGE": "Send message :)"
+    "SEND_MESSAGE": "Send message :)",
+    "PRIVACY_POLICY_ERROR": "Please accept the privacy policy."
 }

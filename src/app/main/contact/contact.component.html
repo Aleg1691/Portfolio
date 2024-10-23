@@ -31,19 +31,19 @@
                     <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="tick"
                         name="checkbox" required>
                     <label for="tick"></label>
-                    @if (!checkbox.valid && checkbox.touched) {
-                    <span>{{ 'PRIVACY_POLICY_ERROR' | translate }}</span>
-                    }
                     <span class="firstText">{{ 'PRIVACY_POLICY_TEXT_PART1' | translate }} <a href="imprint"
                             class="secondText">{{ 'PRIVACY_POLICY_LINK_TEXT' | translate }}</a>
                         {{ 'PRIVACY_POLICY_TEXT_PART2' | translate }}</span>
                 </div>
+                @if (!checkbox.valid && name.touched && email.touched && message.touched) {
+                <span>{{ 'PRIVACY_POLICY_ERROR' | translate }}</span>
+                }
                 <div class="buttonContainer">
                     <button type="submit" [disabled]="!contactForm.valid" [class.valid]="contactForm.valid">{{
                         'SEND_MESSAGE' | translate }}</button>
                 </div>
                 <div class="upArrowContainer">
-                    <a href="#header">
+                    <a href="#aboveTheFold">
                         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
                             <path

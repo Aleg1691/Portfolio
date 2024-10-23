@@ -34,5 +34,6 @@
     "PRIVACY_POLICY_TEXT_PART1": "Ich habe die",
     "PRIVACY_POLICY_LINK_TEXT": "Datenschutzerklärung",
     "PRIVACY_POLICY_TEXT_PART2": "gelesen und stimme der Verarbeitung meiner Daten gemäß den dort aufgeführten Bedingungen zu.",
-    "SEND_MESSAGE": "Nachricht senden :)"
+    "SEND_MESSAGE": "Nachricht senden :)",
+    "PRIVACY_POLICY_ERROR": "Bitte akzeptieren Sie die Datenschutzerklärung."
 }
