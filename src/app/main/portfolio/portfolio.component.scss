@@ -1,0 +1,87 @@
+.portfolioSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .backgroundImgContainer {
+        display: flex;
+        position: absolute;
+        top: 136rem;
+        z-index: -4;
+        left: 0;
+
+        .backgroundImg {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .portfolioHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 100px 0;
+        width: 100%;
+
+        .seperatorTextContainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            width: 100%;
+
+            .firstSeperator {
+                width: clamp(80px, 10vw, 200px);
+                height: 4px;
+                background-color: #9747FF;
+                border-radius: 10px;
+            }
+
+            h3 {
+                font-size: clamp(40px, 8vw, 90px);
+                font-weight: 700;
+                color: white;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+
+            .secondSeperator {
+                width: 36%;
+                height: 4px;
+                background-color: #9747FF;
+                border-radius: 10px 0 0 10px;
+            }
+        }
+
+        span {
+            color: white;
+            font-size: clamp(12px, 4vw, 16px);
+            font-weight: 400;
+            align-self: center;
+            width: 35%;
+        }
+    }
+
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .backgroundImgLeftContainer {
+        display: flex;
+        position: absolute;
+        top: 245rem;
+        left: 0;
+        z-index: -4;
+        width: 30%;
+    
+        .backgroundImgLeft {
+            width: clamp(300px, 50vw, 1000px);
+            height: auto;
+        }
+    }
+    
+}

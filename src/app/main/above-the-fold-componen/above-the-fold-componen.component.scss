@@ -1,0 +1,255 @@
+.aboveTheFoldSection {
+  height: 100vh;
+  width: 100%;
+  margin: 100px 0 0 0;
+
+  .aboveTheFoldUp {
+    display: flex;
+
+    .image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .aboveTheFoldBackGround {
+        position: absolute;
+        top: 150px;
+        left: -58px;
+        z-index: 1;
+        width: 63%;
+        height: auto;
+      }
+
+      .myPhoto {
+        position: relative;
+        z-index: 1;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .hero-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+
+    .introTextMain {
+      display: flex;
+      align-items: center;
+
+      .intro-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        color: white;
+        font-size: 70px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .nameJobTitleContainerMain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .nameJobTitleContainer {
+        display: flex;
+        margin: 0 50px 0 0;
+
+        .name {
+          font-size: 82px;
+          font-weight: bold;
+          color: white;
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+
+        .job-title {
+          font-size: 54px;
+          color: #6a0dad;
+        }
+      }
+    }
+
+    .talkButtonContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .cta-button {
+        margin-top: 35px;
+        padding: 15px 30px;
+        background-color: #70E61C;
+        color: white;
+        border: none;
+        font-size: 23px;
+        font-weight: 400;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #9747FF;
+          transform: scale(1.1) translateX(10px);
+          box-shadow: 0px 4px 15px rgba(200, 200, 200, 0.2);
+        }
+      }
+    }
+  }
+
+  .HeroBackgroundContainer {
+    position: relative;
+    top: -11rem;
+    z-index: 1;
+
+    .heroBackgroundImg {
+      width: 100%;
+      min-height: 32vh;
+      max-height: 27vh;
+      position: relative;
+    }
+  }
+
+
+  .aboveTheFoldDown {
+    position: relative;
+    bottom: 28rem;
+    left: 0;
+    width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: flex-end;
+    z-index: 2;
+    color: white;
+    z-index: 9;
+
+    .linksContainer {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      top: 165px;
+      z-index: 15;
+
+      .seperator {
+        width: 100px;
+        height: 4px;
+        background-color: #9747FF;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .linkImg {
+        display: flex;
+        gap: 32px;
+
+        .btn {
+          display: grid;
+          place-items: center;
+          background: #e3edf7;
+          padding: 5px 10px 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15), 0px 0px 10px rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(0, 0, 0, 0);
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          will-change: transform, box-shadow;
+
+          &:hover {
+            box-shadow:
+              inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+              inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+              -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+              0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+              0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transform: translateY(0.5em);
+          }
+
+          svg {
+            transition: transform 0.3s ease-in-out;
+            will-change: transform;
+          }
+
+          &:hover svg {
+            transform: scale(0.9) rotate(-360deg);
+            fill: #9747FF;
+          }
+        }
+      }
+
+      .emailScrollDown {
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+        font-weight: 400;
+
+        &:hover {
+          color: #9747FF;
+        }
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: rotate(180deg) translateY(0);
+      }
+
+      50% {
+        transform: rotate(180deg) translateY(-10px);
+      }
+    }
+
+    .scrollDownMain {
+      padding: 0 0 0 50px;
+      transform: rotate(180deg);
+
+      .scrollDown {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: bounce 1.5s infinite ease-in-out;
+
+        &:hover {
+          color: #9747FF;
+        }
+
+        &:hover .scroll-arrow path {
+          fill: #9747FF;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1485px) {
+  .aboveTheFoldSection {
+    .aboveTheFoldUp {
+      flex-direction: column;
+    }
+
+    .aboveTheFoldBackGround {
+      top: 0;
+      left: 360px;
+      width: 50%;
+      height: auto;
+    }
+
+    .myPhoto {
+      width: 50%;
+      height: auto;
+    }
+  }
+}

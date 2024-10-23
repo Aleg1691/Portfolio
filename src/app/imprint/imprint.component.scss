@@ -1,0 +1,14 @@
+.impressum {
+    color: white;
+    padding: 0 32px 40px;
+
+    a {
+        color: #007BFF;
+        text-decoration: none;
+        
+        &:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    }
+}

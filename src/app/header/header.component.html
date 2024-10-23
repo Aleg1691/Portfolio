@@ -1,0 +1,31 @@
+<header id="header">
+    <a href="/" class="logo">
+        <img src="assets/img/MyLogo.png" alt="" width="100" height="100">
+    </a>
+    <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav class="desktop-nav">
+        <div class="language">
+            <span class="english" (click)="translate.setLanguage('en')">EN</span>
+            <div class="separator"></div>
+            <span class="german" (click)="translate.setLanguage('de')">DE</span>
+        </div>
+        <a href="#aboutMe">{{'About me' | translate }}</a>
+        <a href="#skills">{{'Skills' | translate}}</a>
+        <a href="#portfolio">Portfolio</a>
+    </nav>
+    <nav class="mobile-nav" [class.active]="menuOpen" (click)="closeMenuOnClickInside($event)">
+        <div class="language">
+            <span class="english" (click)="translate.setLanguage('en')">EN</span>
+            <div class="separator"></div>
+            <span class="german" (click)="translate.setLanguage('de')">DE</span>
+        </div>
+        <a href="#aboutMe" (click)="closeMenu()">{{'About me' | translate }}</a>
+        <a href="#skills" (click)="closeMenu()">{{'Skills' | translate}}</a>
+        <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+        <a href="#contact" (click)="closeMenu()">{{ 'CONTACT_SECTION_TITLE' | translate }}</a>
+    </nav>
+</header>

@@ -1,0 +1,57 @@
+<section id="contact" class="contactSection">
+    <div class="seperatorTextContainer">
+        <div class="seperator"></div>
+        <h3>{{ 'CONTACT_SECTION_TITLE' | translate }}</h3>
+    </div>
+    <div class="textInputContainer">
+        <div class="textContainer">
+            <span class="firstText">{{ 'PROBLEM_TO_SOLVE' | translate }}</span>
+            <span>{{ 'CONTACT_ME_MESSAGE' | translate }}</span>
+            <span>{{ 'NEED_FRONTEND_DEV' | translate }} <b>{{ 'CONTACT_SECTION_TITLE' | translate }}</b></span>
+        </div>
+        <div class="formContainer">
+            <form id="contactForm" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
+                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
+                    placeholder="{{ 'YOUR_NAME_PLACEHOLDER' | translate }}" pattern="^[a-zA-Z]+ [a-zA-Z]+$" required>
+                @if (!name.valid && name.touched) {
+                <span>{{ 'NAME_ERROR' | translate }}</span>
+                }
+                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
+                    placeholder="{{ 'YOUR_EMAIL_PLACEHOLDER' | translate }}"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                @if (!email.valid && email.touched) {
+                <span>{{ 'EMAIL_ERROR' | translate }}</span>
+                }
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                    placeholder="{{ 'YOUR_MESSAGE_PLACEHOLDER' | translate }}" required></textarea>
+                @if (!message.valid && message.touched) {
+                <span>{{ 'MESSAGE_ERROR' | translate }}</span>
+                }
+                <div>
+                    <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="tick"
+                        name="checkbox" required>
+                    <label for="tick"></label>
+                    @if (!checkbox.valid && checkbox.touched) {
+                    <span>{{ 'PRIVACY_POLICY_ERROR' | translate }}</span>
+                    }
+                    <span class="firstText">{{ 'PRIVACY_POLICY_TEXT_PART1' | translate }} <a href="imprint"
+                            class="secondText">{{ 'PRIVACY_POLICY_LINK_TEXT' | translate }}</a>
+                        {{ 'PRIVACY_POLICY_TEXT_PART2' | translate }}</span>
+                </div>
+                <div class="buttonContainer">
+                    <button type="submit" [disabled]="!contactForm.valid" [class.valid]="contactForm.valid">{{
+                        'SEND_MESSAGE' | translate }}</button>
+                </div>
+                <div class="upArrowContainer">
+                    <a href="#header">
+                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+                            <path
+                                d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                                fill="white" />
+                        </svg></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
