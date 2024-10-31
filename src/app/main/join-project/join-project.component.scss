@@ -1,141 +1,194 @@
 .portfolioProjectsSection {
     display: flex;
     justify-content: flex-end;
+}
 
+.portfolioProjectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.descriptionLinksMainContainer {
+    width: 36%;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    color: #9747FF;
+    font-size: 32px;
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.technologies {
+    color: #70E61C;
+    font-size: 23px;
+    font-weight: 400;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.description {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.linksContainer {
+    display: flex;
+    gap: 90px;
+}
+
+.live-test-btn {
+    margin-top: 35px;
+    padding: 15px 30px;
+    background-color: #9747FF;
+    text-decoration: none;
+    color: white;
+    border: none;
+    font-size: 23px;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #70E61C; // Hintergrundfarbe bei Hover grün
+    }
+}
+
+.github-btn {
+    margin-top: 35px;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 2px solid #70E61C;
+    ;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #70E61C; // Hintergrundfarbe bei Hover grün
+    }
+}
+
+img {
+    width: 35%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        animation: shake 1.0s ease-in-out infinite;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg) scale(1.1);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg) scale(1.1);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg) scale(1.1);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg) scale(1.1);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg) scale(1.1);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg) scale(1.1);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg) scale(1.1);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg) scale(1.1);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg) scale(1.1);
+    }
+}
+
+@media (max-width: 1081px) {
     .portfolioProjectsContainer {
+        flex-direction: column;
+    }
+
+    .portfolio-image {
+        min-width: 70px;
+    }
+
+    .descriptionLinksMainContainer {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        text-align: center;
         width: 100%;
-
-        .descriptionLinksMainContainer {
-            width: 36%;
-
-            .descriptionContainer {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-
-                .title {
-                    color: #9747FF;
-                    font-size: 32px;
-                    font-weight: 700;
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                }
-
-                .technologies {
-                    color: #70E61C;
-                    font-size: 23px;
-                    font-weight: 400;
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                }
-
-                .description {
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                    color: white;
-                    font-size: 16px;
-                    font-weight: 400;
-                }
-            }
-        }
     }
 
     .linksContainer {
+        gap: 50px;
+        margin: 20px 0 20px 0;
+    }
+
+    .live-test-btn {
         display: flex;
-        gap: 90px;
-
-        .live-test-btn {
-            margin-top: 35px;
-            padding: 15px 30px;
-            background-color: #9747FF;
-            text-decoration: none;
-            color: white;
-            border: none;
-            font-size: 23px;
-            font-weight: 400;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #70E61C; // Hintergrundfarbe bei Hover grün
-            }
-        }
-
-        .github-btn {
-            margin-top: 35px;
-            padding: 15px 30px;
-            text-decoration: none;
-            color: white;
-            font-size: 23px;
-            font-weight: 400;
-            border-radius: 10px;
-            border: 2px solid #70E61C;
-            ;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #70E61C; // Hintergrundfarbe bei Hover grün
-            }
-        }
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 135px;
+        height: 50px;
     }
 
-    img {
-        width: 35%;
-        max-width: 100%;
-        height: auto;
-        transition: transform 0.3s ease-in-out;
+    .github-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 135px;
+        height: 50px;
+    }
+}
 
-        &:hover {
-            animation: shake 1.0s ease-in-out infinite;
-        }
+@media (max-width: 700px) {
+    .live-test-btn {
+        font-size: 16px;
     }
 
-    @keyframes shake {
-        0% {
-            transform: translate(1px, 1px) rotate(0deg) scale(1.1);
-        }
-
-        10% {
-            transform: translate(-1px, -2px) rotate(-1deg) scale(1.1);
-        }
-
-        20% {
-            transform: translate(-3px, 0px) rotate(1deg) scale(1.1);
-        }
-
-        30% {
-            transform: translate(3px, 2px) rotate(0deg) scale(1.1);
-        }
-
-        40% {
-            transform: translate(1px, -1px) rotate(1deg) scale(1.1);
-        }
-
-        50% {
-            transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
-        }
-
-        60% {
-            transform: translate(-3px, 1px) rotate(0deg) scale(1.1);
-        }
-
-        70% {
-            transform: translate(3px, 1px) rotate(-1deg) scale(1.1);
-        }
-
-        80% {
-            transform: translate(-1px, -1px) rotate(1deg) scale(1.1);
-        }
-
-        90% {
-            transform: translate(1px, 2px) rotate(0deg) scale(1.1);
-        }
-
-        100% {
-            transform: translate(1px, -2px) rotate(-1deg) scale(1.1);
-        }
+    .github-btn {
+        font-size: 16px;
     }
 }

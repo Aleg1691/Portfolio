@@ -4,131 +4,175 @@
     padding: 0 0 0 50px;
     position: relative;
     top: 0;
-    // width: 100%;
+}
 
-    .textSection {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        gap: 28px;
+.textSection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 28px;
+}
 
-        .aboutMeFirstText {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+.aboutMeFirstText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-            h2 {
-                color: white;
-                font-size: 90px;
-                font-weight: 700;
-                margin-block-start: 0em;
-                margin-block-end: 0em;
-            }
+    h2 {
+        color: white;
+        font-size: 90px;
+        font-weight: 700;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
 
-            span {
-                color: white;
-                font-size: 16px;
-                font-weight: 400;
-            }
-        }
+    span {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
 
-        .SecondTextSection {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
+.SecondTextSection {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
 
-            .aboutMeSecondText {
-                display: flex;
-                gap: 20px;
+.aboutMeSecondText {
+    display: flex;
+    gap: 20px;
 
-                img {
-                    width: 48px;
-                    height: 48px;
-                    transition: transform 0.3s ease;
+    img {
+        width: 48px;
+        height: 48px;
+        transition: transform 0.3s ease;
 
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-
-                span {
-                    color: white;
-                }
-            }
-
-            .aboutMeThirdText {
-                display: flex;
-                gap: 20px;
-
-                img {
-                    width: 48px;
-                    height: 48px;
-                    transition: transform 0.3s ease;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-
-                span {
-                    color: white;
-                }
-            }
-
-            .aboutMeFourthText {
-                display: flex;
-                gap: 20px;
-
-                img {
-                    width: 48px;
-                    height: 48px;
-                    transition: transform 0.3s ease;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-
-                span {
-                    color: white;
-                }
-            }
+        &:hover {
+            transform: scale(1.2);
         }
     }
 
+    span {
+        color: white;
+    }
+}
+
+.aboutMeThirdText {
+    display: flex;
+    gap: 20px;
+
+    img {
+        width: 48px;
+        height: 48px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    span {
+        color: white;
+    }
+}
+
+.aboutMeFourthText {
+    display: flex;
+    gap: 20px;
+
+    img {
+        width: 48px;
+        height: 48px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    span {
+        color: white;
+    }
+}
+
+.imageSection {
+    display: flex;
+    width: 40%;
+    position: relative;
+}
+
+.photoSeperatorContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+
+    img {
+        border-radius: 50%;
+        border: 4px solid#1CDAE6;
+    }
+
+    .seperator {
+        flex-grow: 1;
+        height: 4px;
+        background-color: #1CDAE6;
+    }
+}
+
+.backgroundImgContainer {
+    display: flex;
+    position: absolute;
+    top: -14rem;
+    z-index: 5;
+    right: 0rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1300px) {
+    .aboutMeSection {
+        padding: 0 30px;
+    }
+
+    .textSection {
+        flex: 1;
+    }
+
     .imageSection {
-        display: flex;
-        width: 40%;
-        position: relative;
+        display: none;
+    }
 
-        .photoSeperatorContainer {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            z-index: 10;
+    .imageSection {
+        width: 30%;
+    }
+}
 
-            img {
-                border-radius: 50%;
-                border: 4px solid#1CDAE6;
-            }
-            .seperator {
-                flex-grow: 1;
-                height: 4px;
-                background-color: #1CDAE6;
-            }
+@media (max-width: 715px) {
+    .aboutMeFirstText {
+        h2 {
+            font-size: 45px;
         }
+    }
+}
 
-        .backgroundImgContainer {
-            display: flex;
-            position: absolute;
-            top: -14rem;
-            z-index: 5;
-            right: 0rem;
+@media (max-width: 450px) {
+    .aboutMeSection {
+        padding: 0 15px;
+    }
 
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
+    .aboutMeSecondText {
+        gap: 8px;
+    }
+
+    .aboutMeThirdText {
+        gap: 8px;
+    }
+
+    .aboutMeFourthText {
+        gap: 8px;
     }
 }
