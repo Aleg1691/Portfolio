@@ -1,36 +1,41 @@
 <section class="reviewsSection">
-  <div class="backgroundImgContainer">
-    <img src="assets/img/Frame.png" alt="Background">
-  </div>
-  <div class="reviewsMainContainer">
-    <div class="reviewsContainer">
-      <div class="reviews" *ngIf="currentTestimonialIndex === 0">
-        <span>{{ 'TESTIMONIAL_1' | translate }}</span>
+  <div class="mainContainer">
+    <div class="container">
+      <div class="backgroundImgContainer">
+        <img src="assets/img/Frame.png" alt="Background">
       </div>
-      <div class="reviews" *ngIf="currentTestimonialIndex === 1">
-        <span>{{ 'TESTIMONIAL_2' | translate }}</span>
-      </div>
-      <div class="seperatorAuthor">
-        <div class="seperator"></div>
-        <span *ngIf="currentTestimonialIndex === 0">Maurice Preißler - Team Partner</span>
-        <span *ngIf="currentTestimonialIndex === 1">Roman Kabucov - Team Partner</span>
+      <div class="reviewsMainContainer">
+        <div class="reviewsContainer">
+          <div class="reviews" *ngIf="currentTestimonialIndex === 0">
+            <span>{{ 'TESTIMONIAL_1' | translate }}</span>
+          </div>
+          <div class="reviews" *ngIf="currentTestimonialIndex === 1">
+            <span>{{ 'TESTIMONIAL_2' | translate }}</span>
+          </div>
+          <div class="seperatorAuthor">
+            <div class="seperatorTeam"></div>
+            <span *ngIf="currentTestimonialIndex === 0">Maurice Preißler - Team Partner</span>
+            <span *ngIf="currentTestimonialIndex === 1">Roman Kabucov - Team Partner</span>
+          </div>
+        </div>
+        <div class="profileImgSeperatorContainer">
+          <div class="profileImgContainer">
+            <img class="profileImg"
+              [src]="currentTestimonialIndex === 0 ? 'assets/img/mauriceProfil.png' : 'assets/img/romanProfil.png'"
+              alt="Profile Photo">
+          </div>
+          <div class="seperator"></div>
+        </div>
       </div>
     </div>
-    <div class="profileImgSeperatorContainer">
-      <div class="profileImgContainer">
-        <img class="profileImg"
-          [src]="currentTestimonialIndex === 0 ? 'assets/img/mauriceProfil.png' : 'assets/img/romanProfil.png'"
-          alt="Profile Photo">
+    <div class="arrowsPointsContainer">
+      <img (click)="prevTestimonial()" src="assets/img/arrowBack.png" alt="Arrow Back">
+      <div class="pointsContainer">
+        <div class="point" [class.active]="currentTestimonialIndex === 0"></div>
+        <div class="point" [class.active]="currentTestimonialIndex === 1"></div>
       </div>
-      <div class="seperator"></div>
+      <img (click)="nextTestimonial()" src="assets/img/arrowForward.png" alt="Arrow Forward">
     </div>
   </div>
+
 </section>
-<div class="arrowsPointsContainer">
-  <img (click)="prevTestimonial()" src="assets/img/arrowBack.png" alt="Arrow Back">
-  <div class="pointsContainer">
-    <div class="point" [class.active]="currentTestimonialIndex === 0"></div>
-    <div class="point" [class.active]="currentTestimonialIndex === 1"></div>
-  </div>
-  <img (click)="nextTestimonial()" src="assets/img/arrowForward.png" alt="Arrow Forward">
-</div>

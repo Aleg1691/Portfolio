@@ -142,12 +142,16 @@ img {
 }
 
 @media (max-width: 1081px) {
+    .portfolioProjectsSection {
+        margin: 0 10px;
+    }
+
     .portfolioProjectsContainer {
         flex-direction: column;
     }
 
     .portfolio-image {
-        min-width: 70px;
+        min-width: 200px;
     }
 
     .descriptionLinksMainContainer {
@@ -181,5 +185,27 @@ img {
         padding: 0;
         width: 135px;
         height: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .live-test-btn {
+        font-size: 16px;
+    }
+
+    .github-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .live-test-btn {
+        width: 100px;
+        height: 45px;
+    }
+
+    .github-btn {
+        width: 100px;
+        height: 45px;
     }
 }

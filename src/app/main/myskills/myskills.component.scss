@@ -1,7 +1,6 @@
 .mySkillsSection {
     display: flex;
-    align-items: center;
-    height: 100vh;
+    margin: 250px 0;
 }
 
 .iconsSkills {
@@ -239,8 +238,7 @@ a {
     .mobileMySkills {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        height: 100vh;
+        margin: 250px 0;
     }
 
     .mobileH3SeperatorContainer {

@@ -1,89 +1,96 @@
 .reviewsSection {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
+}
 
-    .backgroundImgContainer {
-        position: relative;
-        top: -2rem;
-        z-index: 5;
-        left: 2rem;
+.mainContainer {
+    width: 90%;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+.backgroundImgContainer {
+    position: relative;
+    top: 3rem;
+    z-index: 5;
+    left: -4rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        min-width: 70px;
     }
+}
 
-    .reviewsMainContainer {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        gap: 100px;
+.reviewsMainContainer {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
 
-        .reviewsContainer {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            border: 3px solid #70E61C;
-            border-radius: 20px;
-            color: white;
-            padding: 30px 70px;
-            width: 60%;
-            gap: 44px;
+.reviewsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #70E61C;
+    border-radius: 20px;
+    color: white;
+    padding: 0 30px;
+    width: 850px;
+    height: auto;
+    gap: 44px;
+}
 
-            .reviews {
-                font-size: 17px;
-                font-weight: 400;
-            }
+.reviews {
+    font-size: 17px;
+    font-weight: 400;
+}
 
-            .seperatorAuthor {
-                display: flex;
-                align-items: center;
-                gap: 16px;
+.seperatorAuthor {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 
-                .seperator {
-                    background-color: #9747FF;
-                    width: 60%;
-                    height: 3px;
-                    border-radius: 10px;
-                }
-
-                span {
-                    font-size: 15px;
-                    font-weight: 400;
-                }
-            }
-        }
-
-        .profileImgSeperatorContainer {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-
-            .profileImgContainer {
-                height: 250px;
-                width: 250px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                border: 4px solid #9747FF;
-                overflow: hidden;
-
-                .profileImg {
-                    width: 85%;
-                }
-            }
-
-            .seperator {
-                height: 4px;
-                width: 100px;
-                background-color: #9747FF;
-                flex-grow: 1;
-            }
-        }
+    span {
+        font-size: 15px;
+        font-weight: 400;
     }
+}
+
+.seperatorTeam {
+    background-color: #9747FF;
+    width: 60%;
+    height: 3px;
+    border-radius: 10px;
+}
+
+.profileImgSeperatorContainer {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.profileImgContainer {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid #9747FF;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profileImg {
+    width: 85%;
+}
+
+.seperator {
+    height: 4px;
+    width: 100px;
+    background-color: #9747FF;
+    flex-grow: 1;
 }
 
 .arrowsPointsContainer {
@@ -94,42 +101,76 @@
     margin: 20px 0;
 
     img {
-        border: 2px solid transparent; // Transparenter Rahmen, um Platz zu reservieren
-        border-radius: 50%; // Runde Form für alle Bilder
-        transition: all 0.1s ease; // Übergang für sanfte Animation
-    }
+        border: 2px solid transparent;
+        border-radius: 50%;
+        transition: all 0.1s ease;
 
-    img:hover {
-        border-color: #70E61C; // Ändert nur die Rahmenfarbe beim Hover
-        cursor: pointer;
-    }
-
-    .pointsContainer {
-        display: flex;
-        gap: 20px;
-
-        .point {
-            width: 8px;
-            height: 8px;
-            background-color: #70E61C;
-            border-radius: 50%;
-
-            &.active {
-                background-color: #9747FF; // Farbe, wenn der Punkt aktiv ist
-            }
+        &:hover {
+            border-color: #70E61C;
+            cursor: pointer;
         }
     }
 }
 
-// .imgContainer {
-//     display: flex;
-//     position: absolute;
-//     top: 214rem;
-//     z-index: -1;
-//     right: 0rem;
+.pointsContainer {
+    display: flex;
+    gap: 20px;
+}
 
-//     img {
-//         max-width: 100%;
-//         height: auto;
-//     }
-// }
+.point {
+    width: 8px;
+    height: 8px;
+    background-color: #70E61C;
+    border-radius: 50%;
+
+    &.active {
+        background-color: #9747FF;
+    }
+}
+
+@media (max-width: 1081px) {
+    .reviewsContainer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 10px;
+    }
+
+    .reviewsMainContainer {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .reviewsSection {
+        justify-content: center;
+        margin: 150px 0 0 0;
+    }
+
+    .backgroundImgContainer {
+        display: none;
+    }
+
+    .profileImgSeperatorContainer {
+        justify-content: center;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+    .seperatorAuthor {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .profileImgContainer {
+        height: 200px;
+        width: 200px;
+    }
+}

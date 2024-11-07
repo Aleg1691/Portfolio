@@ -14,7 +14,8 @@
             <span class="german" (click)="translate.setLanguage('de')">DE</span>
         </div>
         <a href="#aboutMe">{{'About me' | translate }}</a>
-        <a href="#skills">{{'Skills' | translate}}</a>
+        <!-- <a href="#skills">{{'Skills' | translate}}</a> -->
+        <a [href]="'#' + getSkillsId()">{{ 'Skills' | translate }}</a>
         <a href="#portfolio">Portfolio</a>
     </nav>
     <nav class="mobile-nav" [class.active]="menuOpen" (click)="closeMenuOnClickInside($event)">
@@ -24,7 +25,8 @@
             <span class="german" (click)="translate.setLanguage('de')">DE</span>
         </div>
         <a href="#aboutMe" (click)="closeMenu()">{{'About me' | translate }}</a>
-        <a href="#skills" (click)="closeMenu()">{{'Skills' | translate}}</a>
+        <!-- <a href="#skills" (click)="closeMenu()">{{'Skills' | translate}}</a> -->
+        <a [href]="'#' + getSkillsId()" (click)="closeMenu()">{{ 'Skills' | translate }}</a>
         <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
         <a href="#contact" (click)="closeMenu()">{{ 'CONTACT_SECTION_TITLE' | translate }}</a>
     </nav>
