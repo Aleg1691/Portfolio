@@ -1,15 +1,15 @@
-.seperator {
-    background-color: #70E61C;
-    width: 100%;
-    height: 4px;
-}
+// .seperator {
+//     background-color: #70E61C;
+//     width: 100%;
+//     height: 4px;
+// }
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px 0 50px;
-    height: 15vh;
+    padding: 23px;
+    border-top: 4px solid #70E61C;
 }
 
 .logoImprint {
@@ -102,9 +102,9 @@ footer {
 @media (max-width: 650px) {
     footer {
         flex-direction: column;
-        gap: 15px;
-        height: 20vh;
-        justify-content: flex-start;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
     }
 
     .linkImg {

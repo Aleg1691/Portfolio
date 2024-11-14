@@ -1,8 +1,9 @@
 .contactSection {
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     color: white;
     position: relative;
+    margin: 0 0 100px 0;
 }
 
 .seperatorTextContainer {
@@ -26,8 +27,6 @@ h3 {
 .textInputContainer {
     display: flex;
     justify-content: center;
-    // flex-wrap: wrap;
-    // width: 100%;
     gap: 200px;
 }
 
@@ -144,7 +143,6 @@ h3 {
         input,
         textarea {
             width: 95%;
-            // padding: 15px 25px;
             border: 2px solid #9747FF;
             border-radius: 10px;
             background-color: #141D2F;
@@ -222,7 +220,6 @@ h3 {
             display: flex;
             align-items: center;
             gap: 15px;
-            // margin-top: 10px;
 
             input[type="checkbox"] {
                 display: none;
@@ -237,7 +234,6 @@ h3 {
                 transition: .1s ease;
                 border: 2px solid #70E61C;
                 border-radius: 3px;
-                // vertical-align: middle;
                 cursor: pointer;
                 flex-shrink: 0;
             }
@@ -402,8 +398,6 @@ h3 {
         margin: 0 30px 0 0;
     }
 }
-
-@media (max-width: 700px) {}
 
 @media (max-width: 600px) {
     h3 {
