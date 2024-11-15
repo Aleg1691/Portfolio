@@ -10,6 +10,7 @@ import { PortfolioComponent } from './main/portfolio/portfolio.component';
 import { ReviewsComponent } from './main/reviews/reviews.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { MaincontentComponent } from './main/maincontent/maincontent.component';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -20,4 +21,8 @@ import { MaincontentComponent } from './main/maincontent/maincontent.component';
 })
 export class AppComponent {
   title = 'Portfolio';
+
+  ngOnInit() {
+    AOS.init();
+  }
 }

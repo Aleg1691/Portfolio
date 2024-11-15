@@ -15,7 +15,7 @@ img {
     width: 70px;
     height: 70px;
     object-fit: contain;
-    padding: 0 0 40px 0;
+    padding: 0 0 10px 0;
     transition: transform 0.6s ease;
     flex: 0 0 calc(25% - 20px);
 
@@ -90,7 +90,7 @@ img {
         content: '';
         position: absolute;
         top: 99%;
-        left: 25%;
+        left: 22%;
         transform: translateX(-50%);
         width: 33px;
         height: 15px;
@@ -99,6 +99,14 @@ img {
         border-bottom-left-radius: 100%;
         border-bottom-right-radius: 100%;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    // Tooltip anzeigen bei Hover, Fokus oder Aktiv
+    button:hover+.tooltip-content,
+    button:focus+.tooltip-content,
+    button:active+.tooltip-content {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -226,6 +234,20 @@ a {
     height: auto;
 }
 
+.iconText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0 20px 0;
+
+    span {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+}
+
 .d-none {
     display: none;
 }
@@ -313,7 +335,7 @@ a {
 
 @media (max-width: 755px) {
     .secondText {
-        font-size:17px;
+        font-size: 17px;
         text-align: center;
         flex-wrap: wrap;
     }
@@ -344,7 +366,7 @@ a {
 
     .mobileIconsSkills {
         grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
-        gap: 0;
+        // gap: 0;
     }
 
     img {
@@ -366,9 +388,23 @@ a {
             left: 74%;
         }
     }
+
+    .iconText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 0 20px 0;
+
+        span {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+    }
 }
 
-@media (max-width: 496px) {
+@media (max-width: 596px) {
     .tooltip-content {
         left: 100px;
         transform: translateX(-50%);
@@ -379,14 +415,25 @@ a {
     }
 }
 
-@media (max-width: 406px) {
+@media (max-width: 481px) {
+    .tooltip-content {
+        left: 0;
+        transform: translateX(-50%);
+
+        &::before {
+            left: 71%;
+        }
+    }
+}
+
+@media (max-width: 366px) {
     .tooltip-content {
         left: auto;
-        right: 6rem;
+        right: 0;
         transform: translateX(50%);
 
         &::before {
-            left: 74%;
+            left: 31%;
         }
     }
 }

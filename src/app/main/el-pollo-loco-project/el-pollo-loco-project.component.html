@@ -1,13 +1,13 @@
-<section class="portfolioProjectsSection">
+<section class="portfolioProjectsSection" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">
     <div class="portfolioProjectsContainer">
-        <img [src]="projects[0].imageSrc" alt="{{projects[0].title}}" class="portfolio-image">
+        <img [src]="projects[0].imageSrc" alt="{{projects[0].title}}" class="portfolio-image" data-aos="fade-up-left" data-aos-delay="300" data-aos-duration="1000">
         <div class="descriptionLinksMainContainer">
-            <div class="descriptionContainer">
+            <div class="descriptionContainer" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="1000">
                 <p class="title">{{projects[0].title}}</p>
                 <p class="technologies">{{projects[0].technologies}}</p>
                 <p class="description">{{ 'POLLO_LOCO_DESCRIPTION' | translate }}</p>
             </div>
-            <div class="linksContainer">
+            <div class="linksContainer" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="1000">
                 <a [href]="projects[0].liveTestUrl" target="_blank" class="live-test-btn">Live test</a>
                 <a [href]="projects[0].githubUrl" target="_blank" class="github-btn">Github</a>
             </div>
