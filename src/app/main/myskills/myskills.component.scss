@@ -62,9 +62,20 @@ img {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .tooltip-content {
     position: absolute;
-    top: -132px;
+    top: -135px;
     left: 7rem;
     transform: translateX(-50%);
     font-size: 16px;
@@ -85,6 +96,7 @@ img {
     max-width: 90vw;
     min-width: 200px;
     pointer-events: auto;
+    animation: fadeIn 0.3s ease;
 
     &::before {
         content: '';
@@ -101,13 +113,10 @@ img {
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     }
 
-    // Tooltip anzeigen bei Hover, Fokus oder Aktiv
-    button:hover+.tooltip-content,
-    button:focus+.tooltip-content,
-    button:active+.tooltip-content {
+    &.active {
         opacity: 1;
         visibility: visible;
-    }
+      }
 }
 
 .iconsText {
@@ -366,7 +375,6 @@ a {
 
     .mobileIconsSkills {
         grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
-        // gap: 0;
     }
 
     img {
@@ -380,6 +388,7 @@ a {
     }
 
     .tooltip-content {
+        top: -138px;
         left: auto;
         right: 6rem;
         transform: translateX(50%);

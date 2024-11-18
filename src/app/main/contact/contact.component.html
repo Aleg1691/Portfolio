@@ -11,18 +11,18 @@
         </div>
         <div class="formContainer">
             <form id="contactForm" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
-                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
+                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text" autocomplete="name"
                     placeholder="{{ 'YOUR_NAME_PLACEHOLDER' | translate }}" pattern="^[a-zA-Z]+ [a-zA-Z]+$" required>
                 @if (!name.valid && name.touched) {
                 <span>{{ 'NAME_ERROR' | translate }}</span>
                 }
-                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
+                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email" autocomplete="email"
                     placeholder="{{ 'YOUR_EMAIL_PLACEHOLDER' | translate }}"
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
                 @if (!email.valid && email.touched) {
                 <span>{{ 'EMAIL_ERROR' | translate }}</span>
                 }
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" autocomplete="off"
                     placeholder="{{ 'YOUR_MESSAGE_PLACEHOLDER' | translate }}" required></textarea>
                 @if (!message.valid && message.touched) {
                 <span>{{ 'MESSAGE_ERROR' | translate }}</span>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div *ngIf="successMessage" class="successMessage">
-                    <span>Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden.</span>
+                    <span>{{ 'FEEDBACK' | translate }}</span>
                 </div>
                 
                 <div class="upArrowContainer">

@@ -339,16 +339,16 @@
 }
 
 @media (max-width: 1100px) {
-  // .aboveTheFoldSection {
-  //   margin: 0 0 0 0;
-  // }
+  .aboveTheFoldSection {
+    margin: 0 0 150px 0;
+  }
 
   .hero-section {
     top: 0;
   }
 
   .HeroBackgroundContainer {
-    top: 44rem;
+    top: 34rem;
   }
 }
 
@@ -360,7 +360,7 @@
 
 @media (max-width: 855px) {
   .HeroBackgroundContainer {
-    top: 42rem;
+    top: 32rem;
   }
 }
 
@@ -376,7 +376,7 @@
 
 @media (max-width: 730px) {
   .HeroBackgroundContainer {
-    top: 40rem;
+    top: 31rem;
   }
 }
 
@@ -402,12 +402,6 @@
   }
 }
 
-// @media (max-width: 420px) {
-//   .hero-section {
-//     top: -2rem;
-//   }
-// }
-
 @media (max-width: 370px) {
   .myPhoto {
     min-width: 278px;
@@ -418,7 +412,7 @@
   }
 
   .HeroBackgroundContainer {
-    top: 38rem;
+    top: 28.6rem;
   }
 }
 

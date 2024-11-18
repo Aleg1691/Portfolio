@@ -134,7 +134,7 @@
                     <img src="assets/img/Api.png" alt="REST-API Icon">
                     <span>Rest-Api</span>
                 </div>
-                <div class="mobileSvg-container">
+                <div class="mobileSvg-container" (click)="toggleTooltip($event)">
                     <svg class="mobileCustom-icon" width="97" height="121" viewBox="0 0 97 121" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_105102_3272)">
@@ -160,7 +160,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="tooltip-content">
+                    <div class="tooltip-content" #tooltip>
                         <span>{{ 'TOOLTIP_INTEREST_IN_LEARNING' | translate }}</span>
                         <div class="iconsText">
                             <div class="iconTextMiniContainer">
