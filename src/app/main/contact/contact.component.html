@@ -1,5 +1,5 @@
 <section id="contact" class="contactSection">
-    <div class="seperatorTextContainer"  data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">
+    <div class="seperatorTextContainer" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000">
         <div class="seperator"></div>
         <h3>{{ 'CONTACT_SECTION_TITLE' | translate }}</h3>
     </div>
@@ -11,19 +11,20 @@
         </div>
         <div class="formContainer">
             <form id="contactForm" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
-                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text" autocomplete="name"
-                    placeholder="{{ 'YOUR_NAME_PLACEHOLDER' | translate }}" pattern="^[a-zA-Z]+ [a-zA-Z]+$" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
+                    autocomplete="name" placeholder="{{ 'YOUR_NAME_PLACEHOLDER' | translate }}"
+                    pattern="^[a-zA-ZäöüÄÖÜß\s\-]+$" required>
                 @if (!name.valid && name.touched) {
                 <span>{{ 'NAME_ERROR' | translate }}</span>
                 }
-                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email" autocomplete="email"
-                    placeholder="{{ 'YOUR_EMAIL_PLACEHOLDER' | translate }}"
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
+                    autocomplete="email" placeholder="{{ 'YOUR_EMAIL_PLACEHOLDER' | translate }}"
+                    pattern="[a-zA-ZäöüÄÖÜß0-9._%+\-]+@[a-zA-ZäöüÄÖÜß0-9.\-]+\.[a-zA-Z]{2,}" required>
                 @if (!email.valid && email.touched) {
                 <span>{{ 'EMAIL_ERROR' | translate }}</span>
                 }
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" autocomplete="off"
-                    placeholder="{{ 'YOUR_MESSAGE_PLACEHOLDER' | translate }}" required></textarea>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                    autocomplete="off" placeholder="{{ 'YOUR_MESSAGE_PLACEHOLDER' | translate }}" required></textarea>
                 @if (!message.valid && message.touched) {
                 <span>{{ 'MESSAGE_ERROR' | translate }}</span>
                 }
@@ -46,7 +47,7 @@
                 <div *ngIf="successMessage" class="successMessage">
                     <span>{{ 'FEEDBACK' | translate }}</span>
                 </div>
-                
+
                 <div class="upArrowContainer">
                     <a href="#aboveTheFold">
                         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">

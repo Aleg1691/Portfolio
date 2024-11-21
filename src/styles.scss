@@ -1,13 +1,13 @@
 html,
 body {
   scroll-behavior: smooth;
-  scroll-padding-top: 9rem;
-}
-
-body {
+  scroll-padding-top: 14rem;
   background-color: #141D2F;
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Poppins';
+  max-width: 1920px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* poppins-100 - latin */
