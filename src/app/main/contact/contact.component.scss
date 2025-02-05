@@ -3,10 +3,10 @@
     color: white;
     position: relative;
     z-index: 10;
-    padding: 150px 0 100px 0;
+    padding: 150px 0 50px 0;
     max-width: 1920px;
     margin: 0 auto;
-    // height: 80vh;
+    min-height: unset;
 }
 
 .seperatorTextContainer {
@@ -409,11 +409,15 @@ h3 {
         gap: 20px;
         margin: 0 10px 0 10px;
     }
+
+    .contactSection {
+        min-height: 92vh;
+    }
 }
 
 @media (max-width: 1081px) {
     .contactSection {
-        padding: 0px 0 100px 0;
+        padding: 0px 0 50px 0;
     }
 }
 

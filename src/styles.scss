@@ -40,11 +40,10 @@ body {
   scroll-padding-top: 8rem;
   background-color: #141D2F;
   margin: 0 auto;
-  font-family: 'Poppins';
-  // max-width: 1920px;
+  // font-family: 'Poppins';
+  font-family: 'Poppins', Arial, sans-serif;
   width: 100%;
   overflow-x: hidden;
-  // overflow-x: visible;
   @include custom-scrollbar;
 }
 

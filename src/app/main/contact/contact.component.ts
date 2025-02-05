@@ -29,7 +29,7 @@ export class ContactComponent {
   successMessage: boolean = false;
 
   post = {
-    endPoint: 'http://oleg-wenner.com/sendMail.php',
+    endPoint: 'https://oleg-wenner.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

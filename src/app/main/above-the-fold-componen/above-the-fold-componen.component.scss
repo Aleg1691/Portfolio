@@ -55,18 +55,20 @@
   color: white;
   font-size: 70px;
   transform: rotate(180deg);
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1.6rem, 4vw, 3.5rem);
 }
 
 .nameJobTitleContainerMain {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  // flex-direction: column;
+  // align-items: center;
 }
 
 .nameJobTitleContainer {
   display: flex;
-  margin: 0 50px 0 0;
+  padding: 0 10px 0 0;
+  // margin: 0 50px 0 0;
 }
 
 .name {
@@ -76,12 +78,14 @@
   margin-block-start: 0;
   margin-block-end: 0;
   font-size: clamp(2rem, 5vw, 4rem);
+  white-space: nowrap;
 }
 
 .job-title {
   font-size: 54px;
   color: #6a0dad;
   font-size: clamp(1.5rem, 3.5vw, 3rem);
+  white-space: nowrap;
 }
 
 .talkButtonContainer {
@@ -377,9 +381,9 @@
 }
 
 @media (max-width: 650px) {
-  .nameJobTitleContainer {
-    margin: 0;
-  }
+  // .nameJobTitleContainer {
+  //   margin: 0;
+  // }
 
   .cta-button {
     padding: 10px 25px;
@@ -404,7 +408,7 @@
   }
 
   .hero-section {
-    top: -1rem;
+    top: -12rem;
   }
 
   .HeroBackgroundContainer {
