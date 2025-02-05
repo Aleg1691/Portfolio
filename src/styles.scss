@@ -1,13 +1,51 @@
+// Global SCSS Variables for Custom Scrollbar Design
+$scrollbar-track-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+$scrollbar-track-bg: #141D2F; // Hauptfarbe
+$scrollbar-width: 10px; // Schmalere Scrollbar
+$scrollbar-thumb-radius: 8px;
+$scrollbar-thumb-bg: #1F2A40; // Etwas hellere Variante von $scrollbar-track-bg
+$scrollbar-thumb-hover-bg: #3A4A67; // Hover-Effekt für Thumb
+$scrollbar-thumb-border: 2px solid #141D2F; // Kontrast mit der Hauptfarbe
+
+@mixin custom-scrollbar {
+  scrollbar-width: thin; // Für Firefox (thin, auto oder none)
+  scrollbar-color: $scrollbar-thumb-bg $scrollbar-track-bg; // Thumb und Track-Farben
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    background-color: $scrollbar-track-bg;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-bg;
+    border-radius: $scrollbar-thumb-radius;
+    box-shadow: $scrollbar-track-shadow;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $scrollbar-thumb-radius;
+    background-color: $scrollbar-thumb-bg;
+    border: $scrollbar-thumb-border;
+    transition: background-color 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $scrollbar-thumb-hover-bg;
+  }
+}
+
 html,
 body {
   scroll-behavior: smooth;
-  scroll-padding-top: 14rem;
+  scroll-padding-top: 8rem;
   background-color: #141D2F;
   margin: 0 auto;
   font-family: 'Poppins';
-  max-width: 1920px;
+  // max-width: 1920px;
   width: 100%;
   overflow-x: hidden;
+  // overflow-x: visible;
+  @include custom-scrollbar;
 }
 
 /* poppins-100 - latin */

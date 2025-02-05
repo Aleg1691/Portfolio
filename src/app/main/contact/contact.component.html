@@ -13,7 +13,7 @@
             <form id="contactForm" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
                 <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
                     autocomplete="name" placeholder="{{ 'YOUR_NAME_PLACEHOLDER' | translate }}"
-                    pattern="^[a-zA-ZäöüÄÖÜß\s\-]+$" required>
+                    pattern="^[a-zA-ZäöüÄÖÜß\s\-]+ [a-zA-ZäöüÄÖÜß\s\-]+$" required>
                 @if (!name.valid && name.touched) {
                 <span>{{ 'NAME_ERROR' | translate }}</span>
                 }

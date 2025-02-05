@@ -2,7 +2,11 @@
     width: 100%;
     color: white;
     position: relative;
-    margin: 150px 0 100px 0;
+    z-index: 10;
+    padding: 150px 0 100px 0;
+    max-width: 1920px;
+    margin: 0 auto;
+    // height: 80vh;
 }
 
 .seperatorTextContainer {
@@ -13,7 +17,7 @@
 }
 
 .seperator {
-    width: 535px;
+    width: 50%;
     height: 4px;
     background-color: #9747FF;
     border-radius: 10px;
@@ -404,6 +408,12 @@ h3 {
         align-items: center;
         gap: 20px;
         margin: 0 10px 0 10px;
+    }
+}
+
+@media (max-width: 1081px) {
+    .contactSection {
+        padding: 0px 0 100px 0;
     }
 }
 

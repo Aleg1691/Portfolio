@@ -1,0 +1,67 @@
+.mainContant {
+    // overflow: hidden;
+    // overflow-x: visible;
+    position: relative;
+}
+
+.backgroundImg {
+    position: absolute;
+    z-index: 0;
+    left: 77%;
+    top: 57rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.backgroundImgGreen {
+    // transform-style: preserve-3d;
+    position: absolute;
+    z-index: 0;
+    right: 75%;
+    top: 115rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.backgroundPortfolio {
+    position: absolute;
+    z-index: 0;
+    right: 85%;
+    top: 230rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.backgroundReviews {
+    position: absolute;
+    z-index: 0;
+    left: 90%;
+    top: 255rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    transform: rotate(-180deg);
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.backgroundPortContact {
+    position: absolute;
+    z-index: 0;
+    right: 71%;
+    top: 305rem;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    max-height: 600px;
+    max-width: 600px;
+}

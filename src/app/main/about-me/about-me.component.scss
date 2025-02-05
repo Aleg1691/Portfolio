@@ -4,6 +4,9 @@
     padding: 0 0 0 50px;
     position: relative;
     top: 0;
+    max-width: 1920px;
+    margin: 0 auto;
+    z-index: 10;
 }
 
 .textSection {
@@ -117,13 +120,14 @@
         flex-grow: 1;
         height: 4px;
         background-color: #1CDAE6;
+        border-radius: 0 10px 10px 0;
     }
 }
 
 .backgroundImgContainer {
     display: flex;
     position: absolute;
-    top: -14rem;
+    top: -8rem;
     z-index: 5;
     right: 0rem;
 
