@@ -21,6 +21,7 @@
         <div class="profileImgSeperatorContainer">
           <div class="profileImgContainer">
             <img class="profileImg"
+              [class.romanSize]="currentTestimonialIndex === 1"
               [src]="currentTestimonialIndex === 0 ? 'assets/img/mauriceProfil.png' : 'assets/img/romanProfil.png'"
               alt="Profile Photo">
           </div>
